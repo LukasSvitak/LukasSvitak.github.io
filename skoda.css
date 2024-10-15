@@ -1,0 +1,329 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-image: url('skoda-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+
+nav {
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    background-color: rgba(0, 0, 0, 0.196);
+}
+
+.obrazky{
+   border: 1px solid #ff4a17;
+}
+
+
+
+.nazory {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+    background-color: black;
+    margin: 20px auto; 
+    color: white; 
+    z-index: 2;
+    position: relative;
+    top: 30px;
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 5);
+}
+
+.nadpis h2 {
+color: white;
+text-align: center;
+font-size: 20px;
+margin-top: 100px;
+}
+
+.nadpis h1 {
+color: white;
+text-align: center;
+font-size: 25px;
+position: relative;
+bottom: 20px;
+}
+
+
+.nazory p {
+color: white;
+width: 200px;
+text-align: center;
+}
+
+.nazory {
+border-radius: 15px;
+}
+
+
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 90px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: color 0.5s;
+}
+
+nav ul li a:hover {
+    color: #ff4a17;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    display: block;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+    width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+    transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 100vh;
+    padding: 20% 0;
+    background: rgba(255, 255, 255);
+    transition: all 0.5s ease-in;
+    z-index: 3;  
+}
+
+.active {
+    left: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menubar ul li {
+    margin-bottom: 32px;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+    background-color: #f5f5f5;
+}
+
+form {
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+    }
+
+    input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: transparent;
+    margin-top: 20px;
+    text-align: center;
+
+    }
+
+    textarea, input[type="submit"]{
+    color: white;
+    }
+
+    ::placeholder {
+        color: white;
+        }
+
+        input[type="submit"] {
+        width: 70px;
+        }
+    
+        input[type="submit"]:hover {
+        background: #ff4a17;
+        color: white;
+        border: transparent;
+        }
+
+        textarea:focus {
+            border: 3px solid #ff4a17;
+            }
+
+        textarea {
+        width: 250px;
+        }
+
+     
+
+        .container {
+            text-align: center;
+            margin-top: 50vh; 
+            position: relative;
+            bottom: 300px;
+            color: white;
+        }
+
+        .container p {
+        font-size: larger;
+        }
+        
+        .animate-text {
+            opacity: 0; 
+            transform: translateY(70px); 
+            animation: slideIn 1s forwards; 
+            
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        h1 {
+            animation-delay: 0.2s; 
+        }
+        
+        p {
+            animation-delay: 0.4s; 
+        }
+
+        .grid img{
+        width: 40px;
+        padding-top: 20px;
+        }
+
+        .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        text-align: center;
+        gap: 10px;
+        position: relative;
+        bottom: 170px;
+        height: 150px;
+        animation: slideUp 1s ease-out forwards; 
+        opacity: 0;
+        font-size: smaller;
+        }
+
+
+        .grid1 {
+        background-color: white;
+        }
+
+        .grid2 {
+        background-color: white;
+        }
+
+        .grid3 {
+        background-color: white;
+        }
+
+        .grid4 {
+        background-color: white;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(70px); 
+                opacity: 0; 
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1; 
+            }
+        }
+    
+
+
+@media screen and (max-width: 790px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+    }
+}
+
+.nav {
+background-size: cover;
+}
